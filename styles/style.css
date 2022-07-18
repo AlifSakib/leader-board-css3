@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
 /* Common Styles / Base Style / Utilities */
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #f3f1ff;
@@ -11,6 +12,45 @@ hr {
   border: 1px solid #d1d1d1;
   width: 807px;
   margin-bottom: 27px;
+}
+
+/* Header */
+
+.top-container {
+  background-color: #562eff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.left-part {
+  display: flex;
+  column-gap: 5px;
+  align-items: center;
+}
+
+.left-part img {
+  width: 40px;
+  height: 51px;
+}
+
+.left-part h2 {
+  color: white;
+}
+
+.right-part {
+  display: flex;
+  column-gap: 36px;
+}
+
+.navigation-menu ul {
+  list-style: none;
+  display: flex;
+  column-gap: 36px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
 }
 
 /* top players styles */
@@ -54,6 +94,7 @@ main {
 .player img {
   width: 56px;
   height: 56px;
+  object-fit: cover;
 }
 
 .player-name {
@@ -76,6 +117,7 @@ main {
 .blog .thumbnail img {
   width: 177px;
   height: 117px;
+  object-fit: cover;
 }
 
 .blog-info {
@@ -89,12 +131,14 @@ main {
 .blog-author {
   color: #9f9f9f;
   font-size: 16px;
+  font-style: italic;
 }
 
 .blog-author a {
   text-decoration: none;
   font-size: 16px;
   color: #562eff;
+  font-style: italic;
 }
 
 /* Courses Style */
@@ -106,11 +150,22 @@ main {
 }
 
 .course {
+  padding-bottom: 10px;
+}
+
+.course:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
 }
 
 .course .course-banner img {
-  width: 266px;
-  height: 141px;
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.course-detail {
+  padding: 10px;
 }
 
 .course-info {
@@ -172,6 +227,11 @@ main {
     margin: 0;
     font-size: 12px;
   }
+
+  .blogs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .blog {
     display: flex;
     flex-direction: column;
@@ -183,8 +243,17 @@ main {
     font-size: 15px;
   }
 
-  .blogs {
-    grid-template-columns: repeat(1, 1fr);
+  .blog-author {
+    color: #9f9f9f;
+    font-size: 12px;
+    font-style: italic;
+  }
+
+  .blog-author a {
+    text-decoration: none;
+    font-size: 12px;
+    font-style: italic;
+    color: #562eff;
   }
 
   .courses {
